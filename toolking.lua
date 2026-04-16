@@ -143,7 +143,7 @@ speedLabel.Parent = frame
 local statusLabel = Instance.new("TextLabel")
 statusLabel.Size = UDim2.new(0, 260, 0, 20)
 statusLabel.Position = UDim2.new(0.5, -130, 0, 5)
-statusLabel.Text = "✈️ طيران علوي (Y = 75) + أولوية Celestial"
+statusLabel.Text = "✈️ طيران علوي (Y = 100) + أولوية Celestial"
 statusLabel.BackgroundTransparency = 1
 statusLabel.TextColor3 = Color3.fromRGB(0, 200, 255)
 statusLabel.TextSize = 10
@@ -184,7 +184,7 @@ startButton.MouseButton1Click:Connect(function()
     active = true
     statusLabel.Text = "📈 الصعود إلى Y = 75..."
     
-    changeHeight(75, currentSpeed, function()  -- ← Y = 75
+    changeHeight(100, currentSpeed, function()  -- ← Y = 75
         if not active then return end
         statusLabel.Text = "✈️ الطيران إلى Blarant..."
         
@@ -216,7 +216,7 @@ stopButton.MouseButton1Click:Connect(function()
     
     statusLabel.Text = "📈 الصعود إلى Y = 75..."
     
-    changeHeight(75, currentSpeed, function()  -- ← Y = 75
+    changeHeight(100, currentSpeed, function()  -- ← Y = 75
         statusLabel.Text = "✈️ الطيران إلى نقطة البداية..."
         
         flyHorizontal(startPos, currentSpeed, function()
